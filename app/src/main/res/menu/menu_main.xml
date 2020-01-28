@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="nl.hva.fdmci.mad.mad_individual_assignment.ui.MainActivity">
+    <item
+        android:id="@+id/plannerFragment"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="Calendar" />
+    <item
+        android:id="@+id/taskFragment"
+        android:icon="@android:drawable/ic_popup_reminder"
+        android:title="Tasks" />
+</menu>
