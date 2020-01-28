@@ -23,6 +23,13 @@
             android:layout_height="wrap_content"
             android:text="description"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

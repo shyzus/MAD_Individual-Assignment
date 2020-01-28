@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.component_task.view.*
 import nl.hva.fdmci.mad.mad_individual_assignment.R
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
 
 class TaskAdapter(private val tasks: List<Task>?) :
     RecyclerView.Adapter<TaskAdapter.ViewHolder>(){
@@ -31,6 +34,9 @@ class TaskAdapter(private val tasks: List<Task>?) :
         fun bind(task : Task?) {
             itemView.tvTitle.text = task?.title
             itemView.tvDescription.text = task?.description
+            val sdf= SimpleDateFormat("d LLLL YYYY", Locale.ENGLISH)
+            itemView.tvDate.text = sdf.format(task?.date)
+
         }
     }
 }

@@ -9,9 +9,10 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 
 
-@Database(entities = [Task::class], version = 1, exportSchema = false)
+@Database(entities = [Task::class], version = 2, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class TaskRoomDatabase : RoomDatabase() {
 
@@ -39,7 +40,7 @@ abstract class TaskRoomDatabase : RoomDatabase() {
                                         CoroutineScope(Dispatchers.IO).launch {
                                             database.taskDao().insertTask(
                                                 Task(
-                                                    "Title","Description"
+                                                    "Title","Description", Date()
                                                 )
                                             )
                                         }
